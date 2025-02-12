@@ -7,3 +7,14 @@ export const getAllPokemons = (url) => {
             .then((data) => resolve(data)) // JSONデータを返す
     });
 }
+
+export const getPokemon = (url) => {
+    return new Promise((resolve, reject) => {
+        fetch(url)  // リクエストを送信
+            .then((res) => res.json()) // レスポンスをJSON形式に変換
+            .then((data) => {
+                //console.log(data)
+                resolve(data) // JSONデータを返す
+            })
+    });
+}
