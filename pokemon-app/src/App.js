@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React, { useEffect, useState } from "react";
-import { getAllPokemons } from "./utils/pokemon";
+import { getAllPokemons, getPokemon } from "./utils/pokemon";
 
 function App() {
   const initialURL = 'https://pokeapi.co/api/v2/pokemon';
@@ -13,11 +13,22 @@ function App() {
     const fetchPokemonData = async () => {
       //すべてのポケモンのデータを取得
       let res = await getAllPokemons(initialURL);
-      console.log(res);
+
+      // 各ポケモンの詳細データを取得
+      loadPokemon(res.results);
+
       setLoading(false); // ローディングが終了
     };
     fetchPokemonData();
   }, []);
+
+  const loadPokemon = async (data) => {
+    let _PokemonData = await Promise.all(
+      data.map((pokemon) => {
+        let pokemonRecord = getPokemon(pokemon.url)
+      })
+    );
+  };
 
   return (
     <div className="App">
