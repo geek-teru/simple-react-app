@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Card.css'
 //rafce + tabで関数コンポーネントのテンプレートが作成される
 
 
@@ -23,16 +23,13 @@ const Card = ({ pokemon }) => {
             </div>
             <div className='card-info'>
                 <div className='card-data'>
-                    <p className='title'>重さ</p>
-                    <p>{pokemon.weight}</p>
+                    <p className='title'>重さ: {pokemon.weight}</p>
                 </div>
                 <div className='card-data'>
-                    <p className='title'>高さ</p>
-                    <p>{pokemon.height}</p>
+                    <p className='title'>高さ: {pokemon.height}</p>
                 </div>
                 <div className='card-data'>
-                    <p className='title'>特性</p>
-                    <p>{pokemon.abilities[0].ability.name}</p>
+                    <p className='title'>特性: {pokemon.abilities[0].ability.name}</p>
                 </div>
             </div>
         </div>
