@@ -1,8 +1,12 @@
 .card {
     width: 300px;
-    box-shadow: -3px 3px 15px -9px #777777;
+    box-shadow: -3px 3px 10px #777777;
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
+}
+
+.card:hover {
+    transform: translateY(2px);
 }
 
 .card-name {
