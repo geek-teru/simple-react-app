@@ -11,3 +11,21 @@
   gap: 10px;
   margin-top: 20px;
 }
+
+.btn button {
+  padding: 10px 20px;
+  background-color: #2664eb;
+  color: white;
+  border: none;
+  box-shadow: -3px 3px 10px #777777;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  transition: all 0.2s;
+}
+
+.btn button:hover {
+  transform: translateY(2px);
+}
